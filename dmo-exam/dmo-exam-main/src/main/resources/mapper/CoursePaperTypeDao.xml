@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.exam.dao.CoursePaperTypeDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.exam.model.entity.CoursePaperTypeEntity">
+        <id column="id" property="id" />
+        <result column="type_name" property="typeName" />
+        <result column="valid_flag" property="validFlag" />
+        <result column="display_order" property="displayOrder" />
+        <result column="create_time" property="createTime" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="update_time" property="updateTime" />
+        <result column="update_user_id" property="updateUserId" />
+        <result column="built_in_flag" property="builtInFlag" />
+    </resultMap>
+    <sql id="fieldMap">
+        id,type_name,valid_flag,display_order,create_time,create_user_id,update_time,type_name,update_user_id,built_in_flag
+    </sql>
+    <select id="getCoursePaperTypePages" resultType="com.exam.model.po.CoursePaperTypePo">
+        select <include refid="fieldMap"/> from zjyz_course_paper_type
+    </select>
+    <select id="getAllPaperTypes" resultType="com.exam.model.entity.CoursePaperTypeEntity">
+        select * from zjyz_course_paper_type
+    </select>
+    <select id="getAllByExamTypeId" resultType="com.exam.model.entity.CoursePaperTypeEntity">
+
+    </select>
+
+
+</mapper>

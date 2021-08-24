@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.exam.starter.conf.BeanMapperConfig,\
+  com.exam.starter.conf.RedisConfig
